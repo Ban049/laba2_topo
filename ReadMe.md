@@ -202,14 +202,21 @@ Fork — это ваша личная, полная копия чужого ре
 
 Pull Request — это ваше официальное предложение авторам оригинального проекта принять изменения, которые вы сделали в своем форке.
 
-**`git clone https://github.com/YourUsername/project.git  cd project`**
-
+```bash
+$ git clone https://github.com/Ban049/Russian_ban_words
+Cloning into 'Russian_ban_words'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 19 (delta 0), reused 0 (delta 0), pack-reused 16 (from 1)
+Receiving objects: 100% (19/19), 29.71 KiB | 239.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+```
 
 
 1. Откройте страницу вашего форка на GitHub.
-2. GitHub, скорее всего, покажет вам желтую плашку с предложением создать Pull Request из вашей новой ветки. Нажмите на нее.
-3. Если плашки нет, перейдите на вкладку "Pull requests" и нажмите "New pull request".
-4. Убедитесь, что вы предлагаете слияние из вашей ветки (fix-login-bug) в main ветку оригинального репозитория.
-5. Напишите осмысленный заголовок и описание для вашего PR, объясняя, что и зачем вы сделали.
-6. Нажмите "Create pull request".
+2. Перейдите на вкладку "Pull requests" и нажмите "New pull request".
+3. Убедитесь, что вы предлагаете слияние из вашей ветки в main ветку оригинального репозитория.
+4. Напишите осмысленный заголовок и описание для вашего PR, объясняя, что и зачем вы сделали.
+5. Нажмите "Create pull request".
 
