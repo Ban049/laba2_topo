@@ -43,9 +43,79 @@ git version 2.51.0.windows.1```
 **`git init`**: Инициализирует новый репозиторий.
 
 **`git status`**: Показывает текущее состояние репозитория (изменён или нет)
-*Пример из лога (когда еще нечего сохранять):*
+
+**`git add .`**: Добавление всех файлов для подготовки к созданию коммита
+
+**`git add <имя_файла>`**: Добавление конкретного файла для подготовки к созданию коммита
+
+**`git commit -m "Сообщение"`**: Сохраняет подготовленные файлы в историю
+
+**`git log`**: Показывает историю коммитов. Для удобства можно использовать флаги:
+
+--oneline: Показывает коммиты в одну строку.
+--graph: Рисует ASCII-граф веток.
+
+**`git branch`**: Показывает список веток
+
+**`git branch <имя_ветки>`**: Создает новую ветку
+
+**`git checkout <имя_ветки>`**: Переключается на другую ветку. Команда git switch <имя_ветки> делает то же самое
+
+**`git merge <имя_ветки>`**: Вливает указанную ветку в текущую
+
+**`git checkout <хэш_коммита>`**: Перемещает вас в прошлое, в состояние на момент указанного коммита
+
+**`git checkout -b <имя_ветки>`**: Создает ветку из текущего положения и сразу переключается на нее.
+
+**`git checkout <имя_ветки>`**: Переключается на другую ветку. Команда git switch <имя_ветки> делает то же самое
+**`git merge <имя_ветки>`**: Вливает указанную ветку в текущую
 ```bash
 $ git status
 On branch master
 No commits yet
-nothing to commit (create/copy files and use "git add" to track)```
+nothing to commit (create/copy files and use "git add" to track)
+
+$ git add 123.txt
+
+$ git commit -m "My first commit"
+[master (root-commit) 9b76ea5] My first commit
+
+$ git log --graph --oneline
+* 210586a (HEAD -> master) 5 commit (Master)
+|\
+| * b2abae6 (br_1) 1 commit (Br_1)
+| * e0bd27f Create commit (Br_1)
+* | 8639bc2 4 commit (Main)
+|/
+...
+
+$ git diff
+diff --git a/123.txt b/123.txt
+...
++Next message (master)
+
+$ git log
+commit 7b309dd4da5b9bf97880eea6a4c564af61289d8f (HEAD -> local)
+Author: Ban049 <banyou049@gmail.com>
+Date:   Sat Apr 11 13:51:32 2026 +1000
+
+    Коммит 2: создание второй главы
+	
+$ git branch
+* local
+  master
+  
+$ git branch br_1
+
+$ git checkout br_1
+Switched to branch 'br_1'
+
+$ git merge Br_2
+
+$ git checkout 8639bc2
+Note: switching to '8639bc2'.
+You are in 'detached HEAD' state.
+
+$ git checkout -b Br_2
+Switched to a new branch 'Br_2'
+```
