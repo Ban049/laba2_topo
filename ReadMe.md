@@ -44,19 +44,22 @@ git version 2.51.0.windows.1
 **`git init`**: Инициализирует новый репозиторий.
 ```bash
 $ git init
-Initialized empty Git repository in C:/Users/Diana/GitTestsDirectory/.git/```
+Initialized empty Git repository in C:/Users/Diana/GitTestsDirectory/.git/
+```
 
 **`git status`**: Показывает текущее состояние репозитория (изменён или нет)
 ```bash
 $ git status
 On branch master
 No commits yet
-nothing to commit (create/copy files and use "git add" to track)```
+nothing to commit (create/copy files and use "git add" to track)
+```
 
 **`git add .`**: Добавление всех файлов для подготовки к созданию коммита
 
 ```bash
-$ git add 123.txt```
+$ git add 123.txt
+```
 
 **`git add <имя_файла>`**: Добавление конкретного файла для подготовки к созданию коммита
 
@@ -64,13 +67,15 @@ $ git add 123.txt```
 $ git status
 On branch master
 No commits yet
-nothing to commit (create/copy files and use "git add" to track)```
+nothing to commit (create/copy files and use "git add" to track)
+```
 
 **`git commit -m "Сообщение"`**: Сохраняет подготовленные файлы в историю
 
 ```bash
 $ git commit -m "My first commit"
-[master (root-commit) 9b76ea5] My first commit```
+[master (root-commit) 9b76ea5] My first commit
+```
 
 **`git log`**: Показывает историю коммитов. Для удобства можно использовать флаги:
 
@@ -92,61 +97,71 @@ $ git log --graph --oneline
 | * e0bd27f Create commit (Br_1)
 * | 8639bc2 4 commit (Main)
 |/
-...```
+...
+```
 
 **`git diff`**: Показывает разницу между файлами:
 ```bash
 $ git diff
 diff --git a/123.txt b/123.txt
 ...
-+Next message (master)```
++Next message (master)
+```
 
 **`git branch`**: Показывает список веток
 
 ```bash
 $ git branch
 * local
-  master```
+  master
+  ```
 
 **`git branch <имя_ветки>`**: Создает новую ветку
 
 ```bash
-$ git branch br_1```
+$ git branch br_1
+```
 
 **`git checkout <имя_ветки>`**: Переключается на другую ветку. Команда git switch <имя_ветки> делает то же самое
 
 ```bash
 $ git checkout br_1
-Switched to branch 'br_1'```
+Switched to branch 'br_1'
+```
 
 **`git merge <имя_ветки>`**: Вливает указанную ветку в текущую
 
 ```bash
-$ git merge Br_2```
+$ git merge Br_2
+```
 
 **`git checkout <хэш_коммита>`**: Перемещает вас в прошлое, в состояние на момент указанного коммита
 
 ```bash
 $ git checkout 8639bc2
 Note: switching to '8639bc2'.
-You are in 'detached HEAD' state.```
+You are in 'detached HEAD' state.
+```
 
 **`git checkout -b <имя_ветки>`**: Создает ветку из текущего положения и сразу переключается на нее.
 
 ```bash
 $ git checkout -b Br_2
-Switched to a new branch 'Br_2'```
+Switched to a new branch 'Br_2'
+```
 
 **`git checkout <имя_ветки>`**: Переключается на другую ветку. Команда git switch <имя_ветки> делает то же самое
 
 ```bash
 $ git checkout br_1
-Switched to branch 'br_1'```
+Switched to branch 'br_1'
+```
 
 **`git merge <имя_ветки>`**: Вливает указанную ветку в текущую
 ```bash
 $ git merge br_1
-Auto-merging 123.txt```
+Auto-merging 123.txt
+```
 
 ## Глава 3: Работа с Удаленным Репозиторием 
 
@@ -163,18 +178,21 @@ Auto-merging 123.txt```
 
 *Пример:*
 ```bash
-$git remote add origin https://github.com/YourUsername/git-guide-project.git```
+$git remote add origin https://github.com/YourUsername/git-guide-project.git
+```
 
 **`git push -u <имя_сервера> <имя_ветки>`**: Отправляет  ваши коммиты из локальной ветки на удаленный сервер.
 - Флаг -u (или --set-upstream) устанавливает связь между вашей локальной и удаленной веткой. В следующий раз достаточно будет написать просто git push.
 
 ```bash
-$git push -u origin main```
+$git push -u origin main
+```
 
 **`git pull`**: Загружает изменения с удаленного сервера и автоматически пытается слить их с вашей текущей локальной веткой. 
 
 ```bash
-git pull origin master```
+git pull origin master
+```
 
 **`git clone <URL>`**: Создает полную локальную копию уже существующего удаленного репозитория, включая всю его историю.
 
