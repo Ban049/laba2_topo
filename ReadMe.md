@@ -55,7 +55,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-**`git add .`**: Добавление всех файлов для подготовки к созданию коммита
+**`git add .`**: Добавление всех файлов для подготовки к созданию коммитa
 
 ```bash
 $ git add 123.txt
